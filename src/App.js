@@ -38,8 +38,8 @@ function App() {
     defaultValue: [],
   });
 
-  function handleAddActivity(activiti) {
-    setActivities([...activities, { ...activiti, id: uid() }]);
+  function handleAddActivity(activity) {
+    setActivities([...activities, { ...activity, id: uid() }]);
   }
 
   //Filtered Activities
@@ -48,12 +48,15 @@ function App() {
   );
 
   function handleDeleteActivity(idToRemove) {
-    setActivities(activities.filter((activiti) => activiti.id !== idToRemove));
+    setActivities(activities.filter((activity) => activity.id !== idToRemove));
   }
 
   return (
     <>
-      <h1>{weather.condition + weather.temperature + "°C"}</h1>
+      <h1 className="flex-evenly">
+        <span>{weather.condition}</span>
+        <span> {weather.temperature + "°C"}</span>
+      </h1>
       <List
         activities={filteredActivities}
         isGoodWeather={weather.isGoodWeather}

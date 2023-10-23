@@ -1,0 +1,29 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.form--button {
+  margin: 1rem;
+  background-color: rgb(246, 125, 27);
+  color: white;
+  border: 1px;
+  border-radius: 1rem;
+  padding: 1rem 3rem;
+}
+
+.form--button:hover {
+  background-color: white;
+  color: rgb(246, 125, 27);
+  border: 1px solid rgb(246, 125, 27);
+  cursor: pointer;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  font-weight: bold;
+}
+
+.form--textInput {
+  margin-inline-end: 1rem;
+}

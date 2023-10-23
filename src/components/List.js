@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import "./List.css";
 
 export function List({ activities, isGoodWeather, onDeleteActivity }) {
   return (
@@ -8,15 +9,15 @@ export function List({ activities, isGoodWeather, onDeleteActivity }) {
           ? "The weather is awesome! Go outside and:"
           : "Bad weather outside! Here's what you can do now:"}
       </h2>
-      <ul>
-        {activities.map((activiti) => (
-          <Fragment key={activiti.id}>
-            <li>{activiti.name}</li>
+      <ul className="list-activities">
+        {activities.map((activity) => (
+          <div className="div--list-item flex-evenly" key={activity.id}>
+            <li>{activity.name}</li>
 
-            <button type="button" onClick={() => onDeleteActivity(activiti.id)}>
+            <button type="button" onClick={() => onDeleteActivity(activity.id)}>
               X
             </button>
-          </Fragment>
+          </div>
         ))}
       </ul>
     </>

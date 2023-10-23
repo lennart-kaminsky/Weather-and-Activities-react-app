@@ -22,7 +22,7 @@ function App() {
 
   return (
     <>
-      <List activities={filteredActivities} />
+      <List activities={filteredActivities} isGoodWeather={isGoodWeather} />
       <Form onAddActivity={handleAddActivity}></Form>
     </>
   );

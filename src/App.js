@@ -58,7 +58,7 @@ function App() {
         <span> {weather.temperature + "°C"}</span>
       </h1>
       <List
-        activities={filteredActivities}
+        filteredActivities={filteredActivities}
         isGoodWeather={weather.isGoodWeather}
         onDeleteActivity={handleDeleteActivity}
       />

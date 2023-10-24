@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import "./List.css";
 
-export function List({ activities, isGoodWeather, onDeleteActivity }) {
+export function List({ filteredActivities, isGoodWeather, onDeleteActivity }) {
   return (
     <>
       <h2 className="list-headline">
@@ -10,10 +10,9 @@ export function List({ activities, isGoodWeather, onDeleteActivity }) {
           : "Bad weather outside! Here's what you can do now:"}
       </h2>
       <ul className="list-activities">
-        {activities.map((activity) => (
-          <div className="div--list-item flex-evenly" key={activity.id}>
-            <li>{activity.name}</li>
-
+        {filteredActivities.map((activity) => (
+          <li className="div--list-item flex-evenly" key={activity.id}>
+            <div>{activity.name}</div>
             <button
               className="delete"
               type="button"
@@ -21,7 +20,7 @@ export function List({ activities, isGoodWeather, onDeleteActivity }) {
             >
               ❌
             </button>
-          </div>
+          </li>
         ))}
       </ul>
     </>

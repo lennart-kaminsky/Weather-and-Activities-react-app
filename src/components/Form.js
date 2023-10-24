@@ -6,7 +6,7 @@ export function Form({ onAddActivity }) {
 
     const newActivity = {
       name: event.target.nameInput.value,
-      isForGoodWeather: event.target.weatherInput.checked ? true : false,
+      isForGoodWeather: event.target.weatherInput.checked,
     };
     console.log(newActivity);
     onAddActivity(newActivity);

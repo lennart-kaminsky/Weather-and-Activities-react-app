@@ -12,6 +12,10 @@ function App() {
     isGoodWeather: true,
   });
 
+  const [activities, setActivities] = useLocalStorageState("activities", {
+    defaultValue: [],
+  });
+
   useEffect(() => {
     startFetching();
     const timer = setInterval(() => startFetching(), 5000);
@@ -34,10 +38,6 @@ function App() {
     }
   }, []);
 
-  const [activities, setActivities] = useLocalStorageState("activities", {
-    defaultValue: [],
-  });
-
   function handleAddActivity(activity) {
     setActivities([...activities, { ...activity, id: uid() }]);
   }
@@ -54,7 +54,7 @@ function App() {
   return (
     <>
       <h1 className="flex-evenly">
-        <span>{weather.condition}</span>
+        <span className="weather-condition">{weather.condition}</span>
         <span> {weather.temperature + "°C"}</span>
       </h1>
       <List

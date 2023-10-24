@@ -12,6 +12,7 @@
   border: 1px;
   border-radius: 1rem;
   padding: 1rem 3rem;
+  box-shadow: 2px 2px 2px 2px rgba(55, 53, 53, 0.501);
 }
 
 .form--button:hover {
@@ -25,5 +26,9 @@
 }
 
 .form--textInput {
-  margin-inline-end: 1rem;
+  margin-inline: 0.5rem 1.5rem;
+}
+
+.input-container {
+  font-weight: bold;
 }

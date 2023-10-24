@@ -4,12 +4,12 @@ export function Form({ onAddActivity }) {
   function handleSubmit(event) {
     event.preventDefault();
 
-    const data = {
+    const newActivity = {
       name: event.target.nameInput.value,
       isForGoodWeather: event.target.weatherInput.checked ? true : false,
     };
-    console.log(data);
-    onAddActivity(data);
+    console.log(newActivity);
+    onAddActivity(newActivity);
 
     event.target.reset();
     event.target.nameInput.focus();
@@ -18,7 +18,7 @@ export function Form({ onAddActivity }) {
     <>
       <form onSubmit={handleSubmit} className="form">
         <h2>Add new activity</h2>
-        <div className="flex-evenly">
+        <div className="flex-evenly input-container">
           <label htmlFor="nameInput">Name</label>
           <input
             type="text"

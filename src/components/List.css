@@ -1,3 +1,28 @@
 .list-activities {
   list-style: none;
 }
+
+.list-headline {
+  font-size: 1.8rem;
+}
+
+.div--list-item {
+  display: flex;
+  justify-content: space-between;
+  margin-inline: 25%;
+  margin-block: 1rem;
+  background-color: rgb(246, 125, 27);
+  color: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px rgba(55, 53, 53, 0.501);
+}
+
+.delete {
+  color: red;
+  background-color: white;
+  border: none;
+  padding: 0.5rem 0.7rem;
+  border-radius: 2rem;
+  cursor: pointer;
+}

@@ -4,7 +4,7 @@ import "./List.css";
 export function List({ activities, isGoodWeather, onDeleteActivity }) {
   return (
     <>
-      <h2>
+      <h2 className="list-headline">
         {isGoodWeather
           ? "The weather is awesome! Go outside and:"
           : "Bad weather outside! Here's what you can do now:"}
@@ -14,8 +14,12 @@ export function List({ activities, isGoodWeather, onDeleteActivity }) {
           <div className="div--list-item flex-evenly" key={activity.id}>
             <li>{activity.name}</li>
 
-            <button type="button" onClick={() => onDeleteActivity(activity.id)}>
-              X
+            <button
+              className="delete"
+              type="button"
+              onClick={() => onDeleteActivity(activity.id)}
+            >
+              ❌
             </button>
           </div>
         ))}
